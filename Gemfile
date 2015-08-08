@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "rake"
 gem "grape"
 
-gem 'thin'
+gem 'puma'
 
 group :development, :test do
   gem 'foreman'
