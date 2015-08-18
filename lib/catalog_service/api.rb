@@ -15,13 +15,16 @@ module CatalogService
       end
     end
 
+    get do
+      redirect "/products"
+    end
+
+    get '/products' do
+      product_repo.all_products
+    end
+
     get '/products/:sku' do
-      product = product_repo.lookup_by_sku(params[:sku])
-      if product
-        product
-      else
-        error!('Product not found', 404)
-      end
+      product_repo.lookup_by_sku(params[:sku]) or error!('Product not found', 404)
     end
   end
 end

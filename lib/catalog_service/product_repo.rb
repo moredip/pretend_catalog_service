@@ -26,5 +26,9 @@ module CatalogService
     def lookup_by_sku(sku)
       @products.find{ |p| p.sku == sku }
     end
+
+    def all_products
+      @products
+    end
   end
 end
