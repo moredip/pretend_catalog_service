@@ -6,6 +6,8 @@ gem "grape"
 
 gem 'puma'
 
+gem 'microscope_tracer', '~> 0.2.0'
+
 group :development, :test do
   gem 'foreman'
   gem 'dotenv'
